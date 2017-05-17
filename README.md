@@ -14,6 +14,7 @@ The Arduino pins are the followings:
 - PIN 3 = BLUE
 
 You can change of course.
+The RGB controll url is: HTTP://<YOUR_IP>/color?c=<RGB_CODE>
 
 
 ## Usage
