@@ -6,6 +6,15 @@ Just set your wifi router IP address, SSID and password in the source code to be
 
 Check the MAC address of your ESP8266. You can do that on your router web interface by listing the active wifi connections. Maybe the MAC address is already printed on your PCB or on the chip case. 
 Set a fix IP address for this MAC address in your router. Check DHCP settings for the related sections.
+I case if you want to controll a RGB led strip set a connection with arduino RGB controller on HW serial port. For the arduino the source code is rgb_arduino.ino
+The Arduino pins are the followings:
+
+- PIN 5 = RED
+- PIN 6 = GREEN
+- PIN 3 = BLUE
+
+You can change of course.
+
 
 ## Usage
 
