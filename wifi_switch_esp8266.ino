@@ -59,7 +59,15 @@ void setup(void) {
         server.send(200, "text/plain", "OFF");            // send to someones browser when asked
       }
   });
- 
+  
+   server.on("/color", []() {                             // in case if you are connected with an arduino which controlls RGB
+    String message="Null";                                // The URL should be http://<YOUR_IP>/color?c=<RGB CODE>
+    if(server.argName(0)=="c") {
+      message = "COLOR=" + server.arg(0);  
+      Serial.println(message);
+    }
+    server.send(200, "text/plain", message);
+  });
   server.begin();
 }
 
